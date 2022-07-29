@@ -1,0 +1,40 @@
+simbologia
+* → el signo de multiplicacion indica el progreso de la app atraves del tiempo
+- → el signo de sustraccion indica los acontecimientos literales mas importantes y la condicion final de la app
+a traves del tiempo 
+... → los tres puntos suspensivos indican una reflexion breve de mis consideraciones mas logicas para el avance
+del proyecto
+
+
+*La app quedo el dia 25 de Julio 2022 hasta el minuto 26:55 
+-este error me aparece al momento de ejecutar el servidor, la app crashea
+-las ultimas  modificaciones antes del crasheo se hicieron en los archivos; app.js & index.js 
+...uno de los archivos tiene el problema...
+-revisar documentacion y consultar el error en stackoverflow
+
+*La app quedo el dia 27 de julio 2022 hasta el minuto 55:54
+-error solucionado, el problema fue haber creado el archivo app.js en la carpeta routes, cuando este tenia que ser
+creada en la carpeta src
+-error ECONNREFUSED en la conexion con el servidor de mongodb
+-el archivo database.js esta, por lo visto bien escrito y creado en el directorio correcto
+...en algun proyecto pasado creo haber tenido el mismo problema, creo que me dara que hacer...
+-revisar entradas similares en foros de programacion, sino, una alternativa seria revisar los comentarios del
+video, es mas que seguro que a alguien tambien le sucedio el mismo error
+*La app quedo el dia 28 de julio 2022 hasta la hora 2:00:00 minuto 34:00
+-ECONNREFUSED resuelto, cuando hacia un sudo systemctl status al mongod
+este me arrojaba el Active: failed, por lo que revisando en stackoverflow
+llegue a la solucion, esta es escribir los siguientes scripts 
++sudo chown -R mongodb:mongodb /var/lib/mongodb
++sudo chown -R mongodb:mongodb /var/log/mongodb
+-luego systemctl start mongod.service y luego systemctl status, ahi el Active aparecera como active (running)
+...systemctl es una herramienta muy practica...
+-cuando comence con la seccion de boostrap, inclui tanto el link como el script, tal y como aparece en la documentacion
+oficial, la pagina de la app al momento de hacerle refresh deveria mostrarme los estilos por defecto de botstrap, cosa que 
+no ocurre en mi localhost, nose si no pasa nada y puedo seguir con el curso o busco info hasta tener respuesta
+...si bien es cierto el delay horario que hay en esta ocacion, se debe a que avance arto y sin menores contratiempos a travez
+del curso, no es que se me halla olvidado...
+*la app quedo el dia 
+-problema con bootstrap resuelto
+...hay que poner los links tal cual aparecen en la documentacion...
+-tuve un problema con babel, para poder desplegar la app a produccion, logre solucionarlo
+solo habia que copiar y pegar el script correcto de instalacion
